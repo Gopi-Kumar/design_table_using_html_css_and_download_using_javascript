@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <title>Table to JPEG</title>
+    <script src="html2canvas.js"></script>
+    <!-- <link rel="stylesheet" href="style.css">
+    
+    -->
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+body {
+    background-color: #f0f0f0; /* Background color for the entire page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+#table-container {
+    
+    width:100%;
+    padding:20px;
+    overflow: auto;
+    background: #efefef; /* Container background color */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.8); /* Neo-morphism shadow */
+    
+    
+}
+
+table {
+    font-family: 'Archivo Narrow', sans-serif;
+    border-collapse: collapse;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    margin:10px auto;
+    overflow: hidden;
+
+    box-shadow:2px 2px 20px 1px rgb(169, 169, 169)
+    
+
+}
+
+footer{
+    font-family: 'Archivo Narrow', sans-serif;
+    text-transform: capitalize; 
+}
+
+
+th, td {
+    border: 1px solid #ddd; /* Border color */
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #8e0707; /* Maroon color for table header */
+    color: #fff; /* Text color for table header */
+
+}
+
+thead{
+    border: none;
+}
+thead tr :first-child{
+    border-top-left-radius: 20px; 
+}
+
+thead tr :last-child{
+    border-top-right-radius: 20px; 
+}
+
+
+
+
+td {
+    background-color: white;
+    max-width:190px;
+    word-wrap: break-word;
+    /* background: #f2be42;  */
+}
+
+#download-btn {
+    display: block;
+    margin: 20px auto;
+    background: #8e0707; /* Maroon color for button */
+    color: #fff; /* Text color for button */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#download-btn:hover {
+    background: #6b0505; /* Darker maroon on hover */
+}
+
+header{
+    width:100%;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Calistoga', cursive;
+}
+
+header h3{
+    color:maroon;
+    font-family: 'Oswald';
+}
+
+td p{
+    text-align: left;
+    font-weight: bolder;
+}
+    </style>
+</head>
+<body>
+    <div id="table-container">
+        <header>
+            <h3>R K International School</h3>
+            <p>Term I Examination 2023-24</p>
+            <p>Datesheet</p>
+        </header>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>DAY/ GRADE</th>
+                        <th>I</th>
+                        <th>II</th>
+                        <th>III</th>
+                        <th>IX</th>
+                        <th>X</th>
+                        <th>XI</th>
+                        <th>XII</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23 Sep 23</td>
+                        <td>Saturday</td>
+                        <td>GK/Apt</td>
+                        <td>GK/Apt</td>
+                        <td>GK/Apt</td>
+                        <td colspan="4">HOLIDAY</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>25 Sep 23</td>
+                        <td>Monday</td>
+                        <td colspan="5">HOLIDAY</td>
+                        
+                        <td>Fine Arts</td>
+                        <td>Fine Arts</td>
+                    </tr>
+                    <tr>
+                        <td>26 Sep 23</td>
+                        <td>Tuesday</td>
+                        <td>Hindi</td>
+                        <td>English</td>
+                        <td>EVS</td>
+                        <td>SSC</td>
+                        <td>English</td>
+                        <td>Ph.E/IP</td>
+                        <td>Physics/Pol Sci/Account</td>
+                    </tr>
+                    <tr>
+                        <td>28 Sep 23</td>
+                        <td>Thursday</td>
+                        <td>English</td>
+                        <td>Maths</td>
+                        <td>Maths</td>
+                        <td>Science</td>
+                        <td>Hindi</td>
+                        <td>B.St/History/Chemistry</td>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <td>30 Sep 23</td>
+                        <td>Saturday</td>
+                        <td>Maths</td>
+                        <td>Hindi</td>
+                        <td>English</td>
+                        <td>English</td>
+                        <td>Maths</td>
+                        <td>English</td>
+                        <td>History/Economics</td>
+                    </tr>
+                    <tr>
+                        <td>3 Oct 23</td>
+                        <td>Tuesday</td>
+                        <td colspan="3">HOLIDAY</td>
+                        <!-- <td></td>
+                        <td></td> -->
+                        <td>Maths</td>
+                        <td>Science</td>
+                        <td>Physics/Pol Sci/Accounts</td>
+                        <td>Hindi/B.St/Chemistry</td>
+                    </tr>
+                    <tr>
+                        <td>5 Oct 23</td>
+                        <td>Thursday</td>
+                        <td>EVS</td>
+                        <td>EVS</td>
+                        <td>Hindi</td>
+                        <td>Hindi</td>
+                        <td>Computer</td>
+                        <td>Bio/Maths/Geo</td>
+                        <td>Bio/Maths/Geo</td>
+                    </tr>
+                    <tr>
+                        <td>7 Oct 23</td>
+                        <td>Saturday</td>
+                        <td>Computer</td>
+                        <td>Computer</td>
+                        <td>Computer</td>
+                        <td>Computer</td>
+                        <td>SSC</td>
+                        <td>Hindi/Psychology</td>
+                        <td>Ph.E/IP</td>
+                    </tr>
+                    <tr>
+                        <td colspan="9">
+                            <p>1. Please note that the students with pending dues will not be allowed to sit for these  examinations. So, make sure that the dues are cleared upto the month of september 2023.</p>
+
+        <p>2. No re-examination will be conducted under any circumstance.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+       
+       
+    </div>
+
+    <button id="download-btn">Download as JPEG</button>
+
+    <script>
+        // JavaScript code here
+        const tableContainer = document.getElementById('table-container');
+        const downloadButton = document.getElementById('download-btn');
+
+        downloadButton.addEventListener('click', () => {
+            html2canvas(tableContainer, {scale : 3}).then(canvas => {
+                const jpegUrl = canvas.toDataURL('image/jpeg', 3.0);
+                const a = document.createElement('a');
+                a.href = jpegUrl;
+                a.download = 'table.jpg';
+                a.click();
+            });
+        });
+    </script>
+</body>
+</html>
